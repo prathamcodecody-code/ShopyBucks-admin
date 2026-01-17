@@ -1,5 +1,35 @@
 "use client";
 
+type User = {
+  name?: string;
+  email: string;
+  createdAt: string;
+};
+
+type Summary = {
+  orders: number;
+  totalSpent: number;
+};
+
+type ProductAnalytics = {
+  id: number;
+  title: string;
+  quantity: number;
+  amount: number;
+};
+
+type CategoryAnalytics = {
+  name: string;
+  count: number;
+};
+
+type UserAnalyticsResponse = {
+  user: User;
+  summary: Summary;
+  products: ProductAnalytics[];
+  categories: CategoryAnalytics[];
+};
+
 import AdminLayout from "@/components/AdminLayout";
 import { api } from "@/lib/api";
 import { useEffect, useState } from "react";
@@ -7,7 +37,7 @@ import { useParams } from "next/navigation";
 
 export default function AdminUserDetailPage() {
   const { id } = useParams();
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<UserAnalyticsResponse | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,6 +58,7 @@ export default function AdminUserDetailPage() {
     );
   }
 
+  if (!data) return null;
   const { user, summary, categories, products } = data;
 
   return (
@@ -93,7 +124,7 @@ export default function AdminUserDetailPage() {
   );
 }
 
-function Stat({ title, value }: any) {
+function Stat({ title, value }: { title: string; value: string | number }) {
   return (
     <div className="bg-white border rounded-xl p-4">
       <p className="text-xs text-gray-500 uppercase">{title}</p>
