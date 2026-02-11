@@ -253,14 +253,20 @@ function StatCard({ label, value, icon, bgColor }: any) {
     </div>
   );
 }
+type BadgeColor = 'green' | 'red' | 'gray'
+interface BadgeProps {
+  label: string;
+  color: BadgeColor; // Restrict color to only these three strings
+}
 
-function Badge({ label, color }: any) {
-  const styles = {
+function Badge({ label, color }: BadgeProps) {
+  // Explicitly type the styles object
+  const styles: Record<BadgeColor, string> = {
     green: "bg-green-50 text-green-600 border-green-100",
     red: "bg-red-50 text-red-600 border-red-100",
     gray: "bg-gray-50 text-gray-400 border-gray-100",
   };
-
+  
   return (
     <span className={`px-3 py-1 text-[10px] font-black uppercase tracking-tight rounded-full border ${styles[color]}`}>
       {label}
