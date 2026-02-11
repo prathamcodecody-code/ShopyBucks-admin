@@ -18,6 +18,7 @@ import {
   LogOut,
   PersonStanding,
   Pen,
+  Ticket,
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -180,4 +181,5 @@ export default function Sidebar() {
     </>
   );
 }
+
 
