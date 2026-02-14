@@ -43,7 +43,7 @@ export default function ProductSubtypesPage() {
           <option value="">All Types</option>
           {types.map(t => (
             <option key={t.id} value={t.id}>
-              {t.name}
+              {t.category?.name ? `${t.category.name} → ${t.name}` : t.name}
             </option>
           ))}
         </select>
