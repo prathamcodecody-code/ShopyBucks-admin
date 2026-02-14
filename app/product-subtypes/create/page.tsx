@@ -12,6 +12,7 @@ export default function CreateProductSubtype() {
   const [types, setTypes] = useState<any[]>([]);
 
   useEffect(() => {
+    // Fetch product types with their categories included
     api.get("/product-types").then(res => setTypes(res.data));
   }, []);
 
@@ -35,7 +36,7 @@ export default function CreateProductSubtype() {
           <option value="">Select Product Type</option>
           {types.map(t => (
             <option key={t.id} value={t.id}>
-              {t.name}
+              {t.category?.name ? `${t.category.name} → ${t.name}` : t.name}
             </option>
           ))}
         </select>
