@@ -107,8 +107,9 @@ export default function Sidebar() {
           <nav className="mt-2">
             <p className="px-4 text-[10px] font-black text-amazon-mutedText uppercase tracking-[0.2em] mb-4">Main Menu</p>
             {LinkItem("/dashboard", "Dashboard", LayoutDashboard)}
-            {LinkItem("/homepage", "Homepage Builder", Pen)}
             {LinkItem("/attributes", "Attributes", AlignVerticalDistributeCenterIcon)}
+            {LinkItem("/category-filters", "Category Filters", Layers)}
+            {LinkItem("/homepage", "Homepage Builder", Pen)}
             {LinkItem("/coupons", "Coupons", Ticket)}
             
             <p className="px-4 text-[10px] font-black text-amazon-mutedText uppercase tracking-[0.2em] mt-8 mb-4">Inventory</p>
@@ -183,6 +184,3 @@ export default function Sidebar() {
     </>
   );
 }
-
-
-
