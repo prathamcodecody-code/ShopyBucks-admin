@@ -70,16 +70,16 @@ export default function SellerBankDetailsPage() {
 
   if (!bank) {
     return (
-      <AdminLayout>
+      
         <p className="py-24 text-center text-red-500">
           No bank details submitted by seller.
         </p>
-      </AdminLayout>
+    
     );
   }
 
   return (
-    <AdminLayout>
+  
       <div className="max-w-4xl mx-auto space-y-6">
 
         <h1 className="text-2xl font-bold">Seller Bank Details</h1>
@@ -136,6 +136,5 @@ export default function SellerBankDetailsPage() {
         )}
 
       </div>
-    </AdminLayout>
   );
 }
