@@ -47,7 +47,7 @@ export default function SellerSettingsPage() {
   }
 
   return (
-    <AdminLayout>
+    
       <div className="max-w-4xl mx-auto space-y-8">
 
         <h1 className="text-2xl font-bold">
@@ -198,6 +198,6 @@ export default function SellerSettingsPage() {
         </button>
 
       </div>
-    </AdminLayout>
+
   );
 }
