@@ -38,7 +38,7 @@ export default function SellerProductsPage() {
   }, [id]);
 
   return (
-    <AdminLayout>
+
       <div className="max-w-6xl mx-auto space-y-6">
 
         <h1 className="text-2xl font-bold">
@@ -114,6 +114,6 @@ export default function SellerProductsPage() {
         )}
 
       </div>
-    </AdminLayout>
+
   );
 }
