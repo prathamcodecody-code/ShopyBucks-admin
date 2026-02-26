@@ -1,17 +1,25 @@
 "use client";
 
+import AdminNavbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex bg-amazon-lightGray min-h-screen">
-      {/* SIDEBAR Component */}
+    <div className="flex min-h-screen">
+      {/* SIDEBAR - Fixed position */}
       <Sidebar />
-         <main className="flex-1 ml-0 md:ml-72 pt-20 md:pt-0 min-h-screen transition-all duration-300">
-        <div className="p-4 md:p-8">
+
+      {/* CONTENT AREA - Takes remaining space */}
+      <div className="flex-1 flex flex-col ml-0 md:ml-72">
+        
+        {/* NAVBAR - Sticky at top */}
+        <AdminNavbar />
+
+        {/* MAIN CONTENT - Scrollable area */}
+        <main className="flex-1">
           {children}
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }
