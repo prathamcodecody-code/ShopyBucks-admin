@@ -1,5 +1,6 @@
 "use client";
 
+import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 
@@ -26,6 +27,7 @@ export default function SellerLayout({ children }: { children: React.ReactNode }
       {/* Change max-w-7xl to w-full and remove mx-auto to let it span 
          the full remaining width. 
       */}
+      <Sidebar />
       <div className="w-full p-4 md:p-8 space-y-6">
         
         {/* TAB NAVIGATION */}
