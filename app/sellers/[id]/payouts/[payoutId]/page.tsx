@@ -39,7 +39,7 @@ export default function PayoutDetailsPage() {
 
   if (!payout) {
     return (
-      <AdminLayout>
+      
         <div className="py-20 text-center">
           <p className="text-red-500 font-bold">Payout not found</p>
           <button
@@ -49,12 +49,10 @@ export default function PayoutDetailsPage() {
             Go Back
           </button>
         </div>
-      </AdminLayout>
     );
   }
 
   return (
-    <AdminLayout>
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Payout #{payout.id}</h1>
@@ -78,7 +76,7 @@ export default function PayoutDetailsPage() {
           />
         </div>
       </div>
-    </AdminLayout>
+
   );
 }
 
