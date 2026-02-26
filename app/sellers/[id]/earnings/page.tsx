@@ -42,16 +42,14 @@ export default function SellerEarningsPage() {
 
   if (!data) {
     return (
-      <AdminLayout>
+      
         <p className="py-24 text-center text-red-500">
           Failed to load earnings
         </p>
-      </AdminLayout>
     );
   }
 
   return (
-    <AdminLayout>
       <div className="max-w-6xl mx-auto space-y-8">
 
         <h1 className="text-2xl font-bold text-amazon-text">
@@ -114,7 +112,6 @@ export default function SellerEarningsPage() {
         </div>
 
       </div>
-    </AdminLayout>
   );
 }
 
