@@ -26,7 +26,7 @@ export default function SellerOrdersPage() {
   }, [id]);
 
   return (
-    <AdminLayout>
+  
       <div className="max-w-6xl mx-auto space-y-6">
 
         <h1 className="text-2xl font-bold">
@@ -88,6 +88,6 @@ export default function SellerOrdersPage() {
           </div>
         )}
       </div>
-    </AdminLayout>
+
   );
 }
