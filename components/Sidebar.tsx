@@ -22,6 +22,7 @@ import {
   AlignVerticalDistributeCenterIcon,
   LucidePersonStanding,
   User,
+  BookX,
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -116,6 +117,7 @@ export default function Sidebar() {
             
             <p className="px-4 text-[10px] font-black text-amazon-mutedText uppercase tracking-[0.2em] mt-8 mb-4">Inventory</p>
             {LinkItem("/categories", "Categories", Layers)}
+            {LinkItem("/products", "Products", BookX)}
             {LinkItem("/product-types", "Product Types", Boxes)}
             {LinkItem("/product-subtypes", "Product Subtypes", Box)}
 
@@ -187,3 +189,4 @@ export default function Sidebar() {
     </>
   );
 }
+
