@@ -1,14 +1,7 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "api.firstfemale.in",
-        pathname: "/uploads/**",
-      },
-    ],
+    domains: ["apiv2.shopybucks.com"],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
