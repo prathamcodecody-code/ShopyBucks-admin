@@ -23,6 +23,7 @@ import {
   LucidePersonStanding,
   User,
   BookX,
+  ShoppingCart,
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -120,6 +121,7 @@ export default function Sidebar() {
             {LinkItem("/products", "Products", BookX)}
             {LinkItem("/product-types", "Product Types", Boxes)}
             {LinkItem("/product-subtypes", "Product Subtypes", Box)}
+            {LinkItem("/orders", "orders", ShoppingCart)}
 
             <p className="px-4 text-[10px] font-black text-amazon-mutedText uppercase tracking-[0.2em] mt-8 mb-4">Users & Sellers</p>
             {LinkItem("/sellers", "All Sellers", Package)} 
@@ -189,4 +191,5 @@ export default function Sidebar() {
     </>
   );
 }
+
 
