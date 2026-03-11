@@ -117,22 +117,7 @@ export default function AdminDashboardPage() {
           </div>
         )}
 
-        {/* ================= PLATFORM GLOBAL STATS ================= */}
-        <section>
-          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-amazon-mutedText mb-4 ml-1">
-            Lifetime Infrastructure
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <DashboardCard label="Total Sellers" value={stats.totalSellers} icon={<Store size={20}/>} color="blue" />
-            <DashboardCard label="Pending Selle" value={stats.pendingSellerRequests} icon={<Clock size={20}/>} color="orange" />
-            <DashboardCard label="Categories" value={stats.totalCategories} icon={<Layers size={20}/>} color="purple" />
-            <DashboardCard label="Product Types" value={stats.totalProductTypes} icon={<Package size={20}/>} color="indigo" />
-            <DashboardCard label="Total Orders" value={stats.totalOrders } icon={<ShoppingCart size={20}/>} color="green" />
-            <DashboardCard label="Total Revenue" value={`₹${stats.revenue.toLocaleString()}`} icon={<TrendingUp size={20}/>} color="orange" isOrange />
-          </div>
-        </section>
-
-        {/* ================= DAILY ACTIVITY ================= */}
+         {/* ================= DAILY ACTIVITY ================= */}
         <section>
           <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-amazon-mutedText mb-4 ml-1">
             Real-Time Activity (Today)
@@ -145,6 +130,21 @@ export default function AdminDashboardPage() {
             <DashboardCard label="Today's Revenue" value={`₹${stats.todaysRevenue.toLocaleString()}`} icon={<TrendingUp size={20}/>} color="orange" />
             <DashboardCard label="New Sellers Today" value={stats.newSellersToday } icon={<Store size={20}/>} color="blue" />
             <DashboardCard label="Canceled Orders" value={stats.canceledOrders} icon={<XCircle size={20}/>} color="red" />
+          </div>
+        </section>
+
+        {/* ================= PLATFORM GLOBAL STATS ================= */}
+        <section>
+          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-amazon-mutedText mb-4 ml-1">
+            Lifetime Infrastructure
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <DashboardCard label="Total Sellers" value={stats.totalSellers} icon={<Store size={20}/>} color="blue" />
+            <DashboardCard label="Pending Selle" value={stats.pendingSellerRequests} icon={<Clock size={20}/>} color="orange" />
+            <DashboardCard label="Categories" value={stats.totalCategories} icon={<Layers size={20}/>} color="purple" />
+            <DashboardCard label="Product Types" value={stats.totalProductTypes} icon={<Package size={20}/>} color="indigo" />
+            <DashboardCard label="Total Orders" value={stats.totalOrders } icon={<ShoppingCart size={20}/>} color="green" />
+            <DashboardCard label="Total Revenue" value={`₹${stats.revenue.toLocaleString()}`} icon={<TrendingUp size={20}/>} color="orange" isOrange />
           </div>
         </section>
 
