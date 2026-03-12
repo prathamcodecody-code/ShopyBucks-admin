@@ -24,6 +24,7 @@ import {
   User,
   BookX,
   ShoppingCart,
+  BellIcon,
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -115,6 +116,7 @@ export default function Sidebar() {
             {LinkItem("/category-filters", "Category Filters", Layers)}
             {LinkItem("/homepage", "Homepage Builder", Pen)}
             {LinkItem("/coupons", "Coupons", Ticket)}
+            {LinkItem("/notifications", "Notifications", BellIcon)}
             
             <p className="px-4 text-[10px] font-black text-amazon-mutedText uppercase tracking-[0.2em] mt-8 mb-4">Inventory</p>
             {LinkItem("/categories", "Categories", Layers)}
@@ -191,5 +193,6 @@ export default function Sidebar() {
     </>
   );
 }
+
 
 
