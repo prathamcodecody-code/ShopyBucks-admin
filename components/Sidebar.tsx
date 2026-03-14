@@ -25,6 +25,7 @@ import {
   BookX,
   ShoppingCart,
   BellIcon,
+  RefreshCcw,
 } from "lucide-react";
 
 export default function Sidebar() {
@@ -129,6 +130,7 @@ export default function Sidebar() {
             {LinkItem("/sellers", "All Sellers", Package)} 
             {LinkItem("/sellers/requests", "Seller Requests", Package)}
             {LinkItem("/users", "User Base", PersonStanding)}
+            {LinkItem("/adminrefunddashboard", "Refunds", RefreshCcw)}
             {LinkItem("/employees", "Employees", User)}
 
             <p className="px-4 text-[10px] font-black text-amazon-mutedText uppercase tracking-[0.2em] mt-8 mb-4">Engagement</p>
